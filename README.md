@@ -49,3 +49,7 @@ Chmouel Boudjnah
 ## Alternative
 
 The wiki list another method on how to do this: <https://github.com/gokcehan/lf/wiki/Integrations#zsh-file-picker--directory-changer>
+
+## TODO 
+
+- Detect if current word is a dir/file and auto select it when launching lf
