@@ -10,6 +10,7 @@ __select_with_lf_file() {
         local tmpfile=${TMPPREFIX:-/tmp/.zsh}-zsl-$$
         command lf -selection-path=$tmpfile
         ret=$?
+        [[ ! -e $tmpfile ]] && return 1
         selection=$(cat "$tmpfile")
         rm -f $tmpfile
     }
