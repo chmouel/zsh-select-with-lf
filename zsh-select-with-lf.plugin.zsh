@@ -6,7 +6,19 @@
 __select_with_lf_file() {
     action=${1:-print-selection}
     local current=${LBUFFER##* }
-    selection="$(command lf -${action} )"
+    local initial_directory=${PWD}
+    [[ -n ${current} ]] && {
+        current=${current%%[[:space:]]#}
+        [[ ${current} == '~'* ]] && current=${HOME}${current#'~'}
+    }
+    if [[ -d ${current} ]]; then
+        initial_directory=${current}
+    elif [[ -f ${current} ]]; then
+        initial_directory=${current%/*}
+    elif [[ -d ${current%/*} ]]; then
+        initial_directory=${current%/*}
+    fi
+    selection="$(command lf -${action} ${initial_directory})"
     [[ -z ${selection} ]] && return 1
     [[ -n ${current} ]] && LBUFFER="${LBUFFER% *} "
     LBUFFER="$LBUFFER$selection"

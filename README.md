@@ -27,6 +27,9 @@ will start lf and put the result file or directory on your command line.
 For files you need to select the files and press enter, for the directories you
 need to navigate to the directory and press q to quit lf.
 
+This plugin will try to do the right thing if you have a file or a directory on
+the current word to have lf initially started on the right directory.
+
 ## Configuration
 
 You can customize some variables
@@ -50,6 +53,3 @@ Chmouel Boudjnah
 
 The wiki list another method on how to do this: <https://github.com/gokcehan/lf/wiki/Integrations#zsh-file-picker--directory-changer>
 
-## TODO 
-
-- Detect if current word is a dir/file and auto select it when launching lf
