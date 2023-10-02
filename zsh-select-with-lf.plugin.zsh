@@ -20,6 +20,8 @@ __select_with_lf_file() {
     fi
     selection="$(command lf -${action} ${initial_directory})"
     [[ -z ${selection} ]] && return 1
+    [[ ${selection} == $HOME/* && ${selection} != *" "* ]] && selection="~${selection#$HOME}"
+    [[ ${selection} == *" "* ]] && selection="\"${selection}\""
     [[ -n ${current} ]] && LBUFFER="${LBUFFER% *} "
     LBUFFER="$LBUFFER$selection"
 }
