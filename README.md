@@ -2,6 +2,8 @@
 
 A simple plugin to let you select some files or a directory using [lf](https://github.com/gokcehan/lf)
 
+https://github.com/chmouel/zsh-select-with-lf/assets/98980/e7c2801f-7a9c-40e7-9187-b75fcf64facf
+
 ## 🛠️ Installation
 
 ### Using [Antigen](https://github.com/zsh-users/antigen)
