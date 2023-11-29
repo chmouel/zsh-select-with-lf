@@ -48,13 +48,13 @@ Clone `zsh-vi-mode` into your custom plugins repo
 
 ```shell
 git clone https://github.com/chmouel/zsh-select-with-lf \
-  $ZSH_CUSTOM/plugins/zsh-vi-mode
+  $ZSH_CUSTOM/plugins/zsh-select-with-lf
 ```
 
 Then load as a plugin in your `.zshrc`
 
 ```shell
-plugins+=(zsh-vi-mode)
+plugins+=(zsh-select-with-lf)
 ```
 
 Keep in mind that plugins need to be added before `oh-my-zsh.sh` is sourced.
